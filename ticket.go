@@ -17,8 +17,8 @@ func (c *Client) TicketList() (*[]map[string]interface{}, error) {
 	return &tickets, nil
 }
 
-func (c *Client) TicketSearch(query string, limit int) (*[]map[string]interface{}, error) {
-	var tickets []map[string]interface{}
+func (c *Client) TicketSearch(query string, limit int) (*map[string]interface{}, error) {
+	var tickets map[string]interface{}
 
 	req, err := c.NewRequest("GET", fmt.Sprintf("%s%s", c.Url, fmt.Sprintf("/api/v1/tickets/search?query=%s&limit=%d", query, limit)), nil)
 	if err != nil {

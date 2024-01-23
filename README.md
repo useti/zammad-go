@@ -4,7 +4,7 @@
 ### Example
 
 ```go
-import "github.com/AlessandroSechi/zammad-go"
+import "github.com/useti/zammad-go"
 
 // Create a client instance
 client, err := zammad.NewClient(&zammad.Client{
